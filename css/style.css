@@ -513,7 +513,8 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   .flow-steps { padding: 16px 20px; }
   .flow-step-label { display: none; }
   .flow-panel { padding: 24px 20px; }
-  .chat-window { width: 300px; }
+  .chat-window { width: min(340px, calc(100vw - 48px)); }
+  .contact-strip { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 640px) {
@@ -527,4 +528,43 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   .contact-strip { grid-template-columns: 1fr 1fr; }
   .hero-stat-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-badges-row { flex-direction: column; }
+  .hero-logo-img { height: 200px; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .flow-panel { padding: 20px 16px; }
+  .flow-steps { padding: 14px 16px; }
+  .segment-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .segment-card { padding: 16px 10px; }
+  .segment-icon { font-size: 22px; }
+  .segment-title { font-size: 13px; }
+  .segment-desc { font-size: 10px; }
+  .chat-window { width: calc(100vw - 48px); }
+  .popup-box { padding: 36px 20px 24px; }
+  .popup-headline { font-size: 22px; }
+  .popup-cta-row { flex-direction: column; }
+  .hero-card { padding: 18px 14px; }
+  .section { padding: 52px 0; }
+}
+
+@media (max-width: 420px) {
+  .chat-widget { right: 16px; bottom: 16px; }
+  .chat-window { width: calc(100vw - 32px); max-height: 70vh; }
+  .popup-overlay { padding: 12px; }
+  .popup-box { padding: 32px 16px 20px; max-height: 90vh; overflow-y: auto; border-radius: 14px; }
+  .popup-headline { font-size: 20px; }
+  .popup-logo { height: 70px; }
+  .contact-strip { grid-template-columns: 1fr; }
+  .hero-stat-num { font-size: 18px; }
+  .hero-stat-label { font-size: 10px; }
+  .nav-inner { height: 60px; }
+  .nav-logo-img { height: 56px; }
+  .hero { padding-top: 60px; }
+  .hero h1 { font-size: clamp(26px, 7vw, 36px); }
+  .section-title { font-size: clamp(22px, 6vw, 32px); }
+  .flow-panel-title { font-size: 17px; }
+  .price-total span:last-child { font-size: 24px; }
+  .bs-total span:last-child { font-size: 22px; }
+  .footer-logo { height: 100px; }
+  .hero-logo-img { height: 160px; }
+  .travel-opt { font-size: 11px; padding: 10px 6px; }
+  .btn { padding: 12px 20px; font-size: 13px; }
 }
