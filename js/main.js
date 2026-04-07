@@ -2,6 +2,28 @@
    LUXESeal — Main JS
    ═══════════════════════════════════════ */
 
+// ─── Popup ───
+const popupOverlay = document.getElementById('popupOverlay');
+const popupClose   = document.getElementById('popupClose');
+const popupSkip    = document.getElementById('popupSkip');
+const popupForm    = document.getElementById('popupForm');
+
+function closePopup() { popupOverlay.classList.add('hidden'); }
+
+popupClose.addEventListener('click', closePopup);
+popupSkip.addEventListener('click', closePopup);
+popupOverlay.addEventListener('click', e => { if (e.target === popupOverlay) closePopup(); });
+document.getElementById('popupBookBtn').addEventListener('click', closePopup);
+
+popupForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const btn = popupForm.querySelector('.btn');
+  btn.innerHTML = '<i class="fas fa-check"></i> You\'re on the list!';
+  btn.style.background = '#4ecdc4';
+  btn.style.color = '#07101f';
+  setTimeout(closePopup, 1800);
+});
+
 // ─── Nav scroll ───
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {

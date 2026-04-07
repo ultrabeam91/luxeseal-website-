@@ -3,15 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LUXESeal Notary Co. — Premium Mobile Notary | Greater Atlanta, GA</title>
-  <meta name="description" content="LUXESeal Notary Co. offers premium mobile notary services in DeKalb County and the Greater Atlanta Metro area. Book in 60 seconds. Loan signings, legal documents, apostille assistance, and more.">
-  <meta name="keywords" content="mobile notary Atlanta, notary DeKalb County, loan signing Atlanta, notary services Georgia, LUXESeal Notary">
+  <title>LUXESeal Notary Co. | Premium Mobile Notary — DeKalb County & Greater Atlanta, GA</title>
+  <meta name="description" content="LUXESeal Notary Co. is a premium mobile notary service in DeKalb County and Greater Atlanta, GA. Loan signings, legal documents, apostille assistance. Book in 60 seconds.">
+  <meta name="keywords" content="mobile notary Atlanta, notary DeKalb County, loan signing Atlanta, notary near me Georgia, mobile notary DeKalb, LUXESeal Notary">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="LUXESeal Notary Co. | Premium Mobile Notary Atlanta">
+  <meta property="og:description" content="Premium mobile notary services across Greater Atlanta. Where Convenience Meets Precision.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luxesealnotaryco.com">
+  <link rel="canonical" href="https://luxesealnotaryco.com">
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LUXESeal Notary Co.",
+    "description": "Premium mobile notary services in DeKalb County and Greater Atlanta Metro area.",
+    "url": "https://luxesealnotaryco.com",
+    "telephone": "+14703449111",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "DeKalb County",
+      "addressRegion": "GA",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.7748,
+      "longitude": -84.2963
+    },
+    "areaServed": "Greater Atlanta Metro, GA",
+    "priceRange": "$$",
+    "openingHours": "Mo-Sa 09:00-20:00",
+    "serviceType": "Mobile Notary"
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
+  <!-- ─── POPUP ─── -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-box">
+      <button class="popup-close" id="popupClose"><i class="fas fa-times"></i></button>
+      <img src="/images/logo.png" alt="LUXESeal Notary Co." class="popup-logo">
+      <div class="popup-tag">Now Serving Greater Atlanta</div>
+      <h2 class="popup-headline">Your <em>Concierge</em> Mobile Notary</h2>
+      <div class="popup-pills">
+        <div class="popup-pill">⚡ Same-Day Available</div>
+        <div class="popup-pill">📅 Self-Schedule Online</div>
+      </div>
+      <p class="popup-sub">No traffic. No office trips. No waiting rooms. We come to you.</p>
+      <div class="popup-cta-row">
+        <a href="#book" class="btn btn-primary popup-cta-btn" id="popupBookBtn">
+          <i class="fas fa-calendar-check"></i> Book Now
+        </a>
+        <a href="sms:+14703449111" class="btn btn-outline popup-cta-btn">
+          <i class="fas fa-comment-sms"></i> Text Now
+        </a>
+      </div>
+      <div class="popup-divider"><span>or stay in the loop</span></div>
+      <form class="popup-form" id="popupForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email Address" required>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-bolt"></i> Get VIP Access &amp; Updates
+        </button>
+      </form>
+      <button class="popup-skip" id="popupSkip">No thanks, take me to the site</button>
+      <p class="popup-disclaimer">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
 
   <!-- ─── NAV ─── -->
   <nav class="nav" id="nav">
@@ -20,26 +87,20 @@
         <img src="/images/logo.png" alt="LUXESeal Notary Co." class="nav-logo-img">
       </a>
       <ul class="nav-links">
-        <li><a href="#book">Book Now</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#packages">Packages</a></li>
         <li><a href="#partners">Partners</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a href="#book" class="btn btn-primary nav-cta">
-        <i class="fas fa-calendar-check"></i> Book in 60 Sec
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
+      <a href="#book" class="btn btn-primary nav-cta">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#book" class="mobile-link">Book Now</a>
       <a href="#services" class="mobile-link">Services</a>
       <a href="#packages" class="mobile-link">Packages</a>
       <a href="#partners" class="mobile-link">Partners</a>
       <a href="#faq" class="mobile-link">FAQ</a>
-      <a href="#book" class="btn btn-primary">Book Appointment</a>
+      <a href="#book" class="btn btn-primary">Book Now</a>
     </div>
   </nav>
 
@@ -50,16 +111,10 @@
         <div class="hero-content">
           <div class="hero-tag">Georgia Certified Notary Public · DeKalb County</div>
           <h1>Where Convenience <em>Meets</em> Precision</h1>
-          <p class="hero-sub">
-            Elevated Service. Trusted Results. LUXESeal brings premium mobile notary services directly to you across Greater Atlanta. No hassle, no guesswork.
-          </p>
+          <p class="hero-sub">Elevated Service. Trusted Results. LUXESeal brings premium mobile notary services directly to you across Greater Atlanta. No hassle, no guesswork.</p>
           <div class="hero-btns">
-            <a href="#book" class="btn btn-primary">
-              <i class="fas fa-bolt"></i> Get Instant Quote & Book
-            </a>
-            <a href="#services" class="btn btn-outline">
-              View All Services
-            </a>
+            <a href="#book" class="btn btn-primary"><i class="fas fa-bolt"></i> Book in 60 Seconds</a>
+            <a href="#services" class="btn btn-outline">View Services</a>
           </div>
           <div class="hero-trust-row">
             <div class="hero-trust-item"><i class="fas fa-check-circle"></i> No deposit required</div>
@@ -71,44 +126,44 @@
           <div class="hero-logo-wrap">
             <img src="/images/logo.png" alt="LUXESeal Notary Co." class="hero-logo-img">
           </div>
-        <div class="hero-card">
-          <div class="hero-card-label">Average appointment</div>
-          <div class="hero-stat-grid">
-            <div class="hero-stat">
-              <div class="hero-stat-num">$75</div>
-              <div class="hero-stat-label">Starting price</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">15mi</div>
-              <div class="hero-stat-label">Free travel</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">&lt;30m</div>
-              <div class="hero-stat-label">Response time</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">GA</div>
-              <div class="hero-stat-label">State certified</div>
-            </div>
-          </div>
-          <div class="hero-card-divider"></div>
-          <div class="hero-badges-row">
-            <div class="hero-badge">
-              <div class="badge-icon"><i class="fas fa-shield-alt"></i></div>
-              <div class="badge-text">
-                <strong>Licensed &amp; Professional</strong>
-                <span>Georgia Commissioned Notary</span>
+          <div class="hero-card">
+            <div class="hero-card-label">At a glance</div>
+            <div class="hero-stat-grid">
+              <div class="hero-stat">
+                <div class="hero-stat-num">$75</div>
+                <div class="hero-stat-label">Starting price</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">15mi</div>
+                <div class="hero-stat-label">Free travel</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">&lt;30m</div>
+                <div class="hero-stat-label">Response time</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">GA</div>
+                <div class="hero-stat-label">Certified</div>
               </div>
             </div>
-            <div class="hero-badge">
-              <div class="badge-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div class="badge-text">
-                <strong>Fully Mobile</strong>
-                <span>Home · Office · Hospital</span>
+            <div class="hero-card-divider"></div>
+            <div class="hero-badges-row">
+              <div class="hero-badge">
+                <div class="badge-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="badge-text">
+                  <strong>Licensed &amp; Professional</strong>
+                  <span>Georgia Commissioned Notary</span>
+                </div>
+              </div>
+              <div class="hero-badge">
+                <div class="badge-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="badge-text">
+                  <strong>Fully Mobile</strong>
+                  <span>Home · Office · Hospital</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
@@ -127,17 +182,15 @@
     </div>
   </div>
 
-  <!-- ─── 60-SECOND BOOKING FLOW ─── -->
+  <!-- ─── BOOKING FLOW ─── -->
   <section class="section" id="book">
     <div class="container">
       <div class="section-label">Effortless Booking</div>
-      <h2 class="section-title">Book Your Appointment in 60 Seconds</h2>
+      <h2 class="section-title">Book Your Appointment</h2>
       <div class="divider"></div>
       <p class="section-sub">Select your service, see your exact price, and submit your request. We confirm within 30 minutes.</p>
 
       <div class="booking-flow">
-
-        <!-- Step indicators -->
         <div class="flow-steps">
           <div class="flow-step active" id="step-ind-1">
             <div class="flow-step-num">1</div>
@@ -151,14 +204,14 @@
           <div class="flow-step-line"></div>
           <div class="flow-step" id="step-ind-3">
             <div class="flow-step-num">3</div>
-            <div class="flow-step-label">Price &amp; Book</div>
+            <div class="flow-step-label">Confirm &amp; Book</div>
           </div>
         </div>
 
-        <!-- Step 1: Segment -->
+        <!-- Step 1 -->
         <div class="flow-panel active" id="flow-step-1">
           <h3 class="flow-panel-title">Who are you booking for?</h3>
-          <p class="flow-panel-sub">Select the option that best describes you so we can tailor your experience.</p>
+          <p class="flow-panel-sub">Select the option that best describes you.</p>
           <div class="segment-grid">
             <button class="segment-card" data-segment="individual">
               <div class="segment-icon"><i class="fas fa-user"></i></div>
@@ -168,33 +221,31 @@
             <button class="segment-card" data-segment="business">
               <div class="segment-icon"><i class="fas fa-building"></i></div>
               <div class="segment-title">Business</div>
-              <div class="segment-desc">Corporate filings, contracts, business agreements</div>
+              <div class="segment-desc">Corporate filings, contracts, agreements</div>
             </button>
             <button class="segment-card" data-segment="realestate">
               <div class="segment-icon"><i class="fas fa-home"></i></div>
               <div class="segment-title">Real Estate</div>
-              <div class="segment-desc">Loan signings, title closings, real estate docs</div>
+              <div class="segment-desc">Loan signings, closings, real estate docs</div>
             </button>
             <button class="segment-card" data-segment="legal">
               <div class="segment-icon"><i class="fas fa-balance-scale"></i></div>
               <div class="segment-title">Legal</div>
-              <div class="segment-desc">Wills, trusts, power of attorney, legal filings</div>
+              <div class="segment-desc">Wills, trusts, power of attorney</div>
             </button>
           </div>
         </div>
 
-        <!-- Step 2: Service + Calculator -->
+        <!-- Step 2 -->
         <div class="flow-panel" id="flow-step-2">
           <h3 class="flow-panel-title">Build your order &amp; see your price</h3>
-          <p class="flow-panel-sub">Your total updates in real time as you make selections.</p>
-
+          <p class="flow-panel-sub">Your total updates in real time.</p>
           <div class="calc-layout">
             <div class="calc-form">
               <div class="calc-group">
                 <label class="calc-label">Service Type</label>
                 <div class="service-options" id="serviceOptions"></div>
               </div>
-
               <div class="calc-group" id="docCountGroup" style="display:none;">
                 <label class="calc-label">Number of Documents</label>
                 <div class="doc-counter">
@@ -202,11 +253,10 @@
                   <span class="counter-val" id="docCount">1</span>
                   <button class="counter-btn" id="docPlus"><i class="fas fa-plus"></i></button>
                 </div>
-                <div class="calc-hint">First 2 included · $15 each after</div>
+                <div class="calc-hint">First 2 included · +$25 each after</div>
               </div>
-
               <div class="calc-group">
-                <label class="calc-label">Your Distance from DeKalb County</label>
+                <label class="calc-label">Distance from DeKalb County</label>
                 <div class="travel-options">
                   <button class="travel-opt active" data-travel="0" data-label="0–15 miles">0–15 miles <span>Included</span></button>
                   <button class="travel-opt" data-travel="35" data-label="15–30 miles">15–30 miles <span>+$35</span></button>
@@ -214,7 +264,6 @@
                 </div>
               </div>
             </div>
-
             <div class="price-summary" id="priceSummary">
               <div class="price-summary-title">Your Estimate</div>
               <div class="price-line">
@@ -230,24 +279,22 @@
                 <span id="ps-travel-price">—</span>
               </div>
               <div class="price-total">
-                <span>Estimated Total</span>
+                <span>Total</span>
                 <span id="ps-total">$—</span>
               </div>
-              <div class="price-note-box">No deposit required · We confirm within 30 min</div>
+              <div class="price-note-box">No deposit required · Confirmed within 30 min</div>
               <button class="btn btn-primary price-cta" id="proceedToBook" disabled>
-                Continue to Book <i class="fas fa-arrow-right"></i>
+                Continue <i class="fas fa-arrow-right"></i>
               </button>
             </div>
           </div>
-
           <button class="flow-back" id="backTo1"><i class="fas fa-arrow-left"></i> Back</button>
         </div>
 
-        <!-- Step 3: Booking Form -->
+        <!-- Step 3 -->
         <div class="flow-panel" id="flow-step-3">
-          <h3 class="flow-panel-title">Almost there — confirm your details</h3>
-          <p class="flow-panel-sub">We'll reach out within 30 minutes to confirm your appointment time.</p>
-
+          <h3 class="flow-panel-title">Confirm your details</h3>
+          <p class="flow-panel-sub">We'll reach out within 30 minutes to confirm your appointment.</p>
           <div class="booking-layout">
             <div class="booking-form-wrap">
               <form id="bookingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
@@ -255,7 +302,6 @@
                 <input type="hidden" name="segment" id="hf-segment">
                 <input type="hidden" name="estimated_total" id="hf-total">
                 <input type="hidden" name="travel_zone" id="hf-travel">
-
                 <div class="form-row">
                   <div class="form-group">
                     <label>First Name *</label>
@@ -268,54 +314,49 @@
                 </div>
                 <div class="form-row">
                   <div class="form-group">
-                    <label>Email Address *</label>
+                    <label>Email *</label>
                     <input type="email" name="email" placeholder="jane@email.com" required>
                   </div>
                   <div class="form-group">
-                    <label>Phone Number *</label>
+                    <label>Phone *</label>
                     <input type="tel" name="phone" placeholder="(404) 000-0000" required>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label>Appointment Location (Address or City) *</label>
-                  <input type="text" name="location" placeholder="e.g. 123 Main St, Decatur, GA" required>
+                  <label>Appointment Location *</label>
+                  <input type="text" name="location" placeholder="Address or city" required>
                 </div>
                 <div class="form-group">
                   <label>Preferred Date &amp; Time</label>
-                  <input type="text" name="preferred_time" placeholder="e.g. This Saturday after 2pm, or weekday mornings">
+                  <input type="text" name="preferred_time" placeholder="e.g. Saturday after 2pm">
                 </div>
                 <div class="form-group">
-                  <label>Additional Notes or Questions</label>
-                  <textarea name="message" placeholder="Any special instructions, document details, or questions..."></textarea>
+                  <label>Additional Notes</label>
+                  <textarea name="message" placeholder="Document details or special requests..."></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
-                  <i class="fas fa-paper-plane"></i> Submit Appointment Request
+                  <i class="fas fa-paper-plane"></i> Submit Request
                 </button>
-                <p class="form-note">No spam ever · Your info is private and secure</p>
+                <p class="form-note">Your info is private and secure · No spam ever</p>
               </form>
             </div>
-
             <div class="booking-summary">
               <div class="booking-summary-title">Order Summary</div>
               <div class="bs-row"><span>Segment</span><span id="bs-segment">—</span></div>
               <div class="bs-row"><span>Service</span><span id="bs-service">—</span></div>
               <div class="bs-row" id="bs-extra-row" style="display:none;"><span>Extra docs</span><span id="bs-extra">—</span></div>
-              <div class="bs-row" id="bs-travel-row" style="display:none;"><span>Travel fee</span><span id="bs-travel">—</span></div>
+              <div class="bs-row" id="bs-travel-row" style="display:none;"><span>Travel</span><span id="bs-travel">—</span></div>
               <div class="bs-total"><span>Estimated Total</span><span id="bs-total">—</span></div>
-              <div class="bs-note">
-                <i class="fas fa-info-circle"></i>
-                Final price confirmed at booking. No deposit required.
-              </div>
+              <div class="bs-note"><i class="fas fa-info-circle"></i> Final price confirmed at booking. No deposit required.</div>
               <div class="bs-guarantee">
                 <i class="fas fa-shield-alt"></i>
                 <div>
                   <strong>LUXESeal Promise</strong>
-                  <span>Professional, on-time, and precise. Every time.</span>
+                  <span>Professional, on-time, every time.</span>
                 </div>
               </div>
             </div>
           </div>
-
           <button class="flow-back" id="backTo2"><i class="fas fa-arrow-left"></i> Back</button>
         </div>
 
@@ -324,14 +365,10 @@
           <div class="success-wrap">
             <div class="success-icon"><i class="fas fa-check-circle"></i></div>
             <h3>Request Submitted!</h3>
-            <p>Thank you! We've received your appointment request and will reach out within <strong>30 minutes</strong> to confirm your booking.</p>
-            <p style="margin-top: 8px; font-size: 13px; color: var(--text-muted);">Check your email for a confirmation message.</p>
-            <a href="#" class="btn btn-outline" style="margin-top: 24px;" onclick="resetFlow(); return false;">
-              Book Another Appointment
-            </a>
+            <p>We've received your appointment request and will reach out within <strong>30 minutes</strong> to confirm.</p>
+            <a href="#" class="btn btn-outline" style="margin-top: 24px;" onclick="resetFlow(); return false;">Book Another Appointment</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -340,15 +377,14 @@
   <section class="section section-alt" id="services">
     <div class="container">
       <div class="section-label">What We Offer</div>
-      <h2 class="section-title">All Services &amp; Pricing</h2>
+      <h2 class="section-title">Services &amp; Pricing</h2>
       <div class="divider"></div>
-      <p class="section-sub">Every appointment handled with the professionalism and care your documents deserve. Travel within 15 miles always included.</p>
-
-      <div class="services-grid" style="margin-top: 48px;">
+      <p class="section-sub">Every appointment handled with professionalism and care. Travel within 15 miles always included.</p>
+      <div class="services-grid">
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-file-signature"></i></div>
           <h3>Standard Notarization</h3>
-          <p>Up to 2 documents notarized at your location. Perfect for personal affidavits, consent forms, and general documents.</p>
+          <p>Up to 2 documents notarized at your location. Perfect for affidavits, consent forms, and general documents.</p>
           <div class="service-price">
             <span class="price-from">From</span>
             <span class="price-num">$75</span>
@@ -358,7 +394,7 @@
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-home"></i></div>
           <h3>Loan Signing / Real Estate</h3>
-          <p>Full loan package signings for buyers, sellers, and refinances. Includes up to 10 pages of loan docs and travel.</p>
+          <p>Full loan package signings for buyers, sellers, and refinances. Includes travel and up to 10 pages of loan docs.</p>
           <div class="service-price">
             <span class="price-from">From</span>
             <span class="price-num">$200</span>
@@ -368,7 +404,7 @@
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-building"></i></div>
           <h3>Business &amp; Corporate Docs</h3>
-          <p>Contracts, business agreements, corporate filings, and partnership documents handled with complete professionalism.</p>
+          <p>Contracts, business agreements, corporate filings, and partnership documents handled professionally.</p>
           <div class="service-price">
             <span class="price-from">From</span>
             <span class="price-num">$125</span>
@@ -378,7 +414,7 @@
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
           <h3>Legal &amp; Estate Documents</h3>
-          <p>Wills, trusts, power of attorney, healthcare directives, and other legal documents requiring a commissioned notary.</p>
+          <p>Wills, trusts, power of attorney, healthcare directives, and other legal documents handled with discretion.</p>
           <div class="service-price">
             <span class="price-from">From</span>
             <span class="price-num">$150</span>
@@ -388,7 +424,7 @@
         <div class="service-card">
           <div class="service-icon"><i class="fas fa-globe"></i></div>
           <h3>Apostille Assistance</h3>
-          <p>Guidance and support for authenticating documents for international use. We walk you through every step.</p>
+          <p>Guidance and support for authenticating documents for international use, from start to finish.</p>
           <div class="service-price">
             <span class="price-from">From</span>
             <span class="price-num">$275</span>
@@ -396,16 +432,12 @@
           </div>
         </div>
         <div class="service-card service-card-dark">
-          <div class="service-icon service-icon-gold"><i class="fas fa-question"></i></div>
+          <div class="service-icon"><i class="fas fa-question"></i></div>
           <h3>Not Sure What You Need?</h3>
-          <p>Send us a message describing your documents and we'll recommend the right service and get you scheduled quickly.</p>
-          <a href="#book" class="btn btn-primary" style="font-size: 13px; padding: 11px 20px; margin-top: 16px;">
-            <i class="fas fa-envelope"></i> Ask LUXE Assistant
-          </a>
+          <p>Use the LUXE Assistant below or send us a message — we'll point you in the right direction.</p>
+          <a href="#book" class="btn btn-primary" style="font-size:13px;padding:10px 18px;margin-top:16px;"><i class="fas fa-bolt"></i> Book Now</a>
         </div>
       </div>
-
-      <!-- Travel Fees inline -->
       <div class="travel-inline">
         <div class="travel-inline-title"><i class="fas fa-car"></i> Mobile Travel Fees</div>
         <div class="travel-inline-grid">
@@ -423,14 +455,12 @@
       <div class="section-label">Plans &amp; Subscriptions</div>
       <h2 class="section-title">Built for Every Client</h2>
       <div class="divider"></div>
-      <p class="section-sub">From one-time appointments to full monthly retainers — LUXESeal has a plan designed around your needs.</p>
-
-      <div class="packages-grid" style="margin-top: 48px;">
-
+      <p class="section-sub">From one-time appointments to full monthly retainers — a plan designed around your needs.</p>
+      <div class="packages-grid">
         <div class="pkg-card">
           <div class="pkg-badge">Individual</div>
           <div class="pkg-price"><span class="pkg-price-val">Pay As You Go</span></div>
-          <div class="pkg-sub">Perfect for personal notarizations, one-time signings, and occasional document needs.</div>
+          <div class="pkg-sub">For personal notarizations and one-time document needs.</div>
           <ul class="pkg-features">
             <li><i class="fas fa-check"></i> Standard pricing, no commitment</li>
             <li><i class="fas fa-check"></i> Mobile — we come to you</li>
@@ -440,353 +470,204 @@
           </ul>
           <a href="#book" class="btn btn-outline pkg-btn">Book Now</a>
         </div>
-
         <div class="pkg-card pkg-card-featured">
           <div class="pkg-popular">Most Popular</div>
           <div class="pkg-badge pkg-badge-gold">Business Bundle</div>
-          <div class="pkg-price">
-            <span class="pkg-price-val">$200</span>
-            <span class="pkg-price-per">/month</span>
-          </div>
-          <div class="pkg-sub">For small businesses that need reliable notary services on a regular basis.</div>
+          <div class="pkg-price"><span class="pkg-price-val">$250</span><span class="pkg-price-per">/month</span></div>
+          <div class="pkg-sub">For small businesses needing reliable notary services on a regular basis.</div>
           <ul class="pkg-features">
-            <li><i class="fas fa-check"></i> 5 notarizations per month</li>
+            <li><i class="fas fa-check"></i> 4 notarizations per month</li>
             <li><i class="fas fa-check"></i> Priority scheduling</li>
             <li><i class="fas fa-check"></i> Same-day availability (when open)</li>
             <li><i class="fas fa-check"></i> Dedicated client contact</li>
-            <li><i class="fas fa-check"></i> Monthly billing, cancel anytime</li>
             <li><i class="fas fa-check"></i> Rollover unused appointments</li>
           </ul>
-          <a href="#contact-form" class="btn btn-primary pkg-btn">Get Started</a>
+          <a href="#contact-section" class="btn btn-primary pkg-btn">Get Started</a>
         </div>
-
         <div class="pkg-card">
           <div class="pkg-badge">Real Estate Pro</div>
-          <div class="pkg-price">
-            <span class="pkg-price-val">$350</span>
-            <span class="pkg-price-per">/month</span>
-          </div>
-          <div class="pkg-sub">Designed for real estate agents and title companies who need a reliable signing partner.</div>
+          <div class="pkg-price"><span class="pkg-price-val">$450</span><span class="pkg-price-per">/month</span></div>
+          <div class="pkg-sub">For real estate agents and title companies needing a reliable signing partner.</div>
           <ul class="pkg-features">
-            <li><i class="fas fa-check"></i> 10 loan signings per month</li>
+            <li><i class="fas fa-check"></i> 5 loan signings per month</li>
             <li><i class="fas fa-check"></i> Top-priority scheduling</li>
             <li><i class="fas fa-check"></i> Direct line — no back-and-forth</li>
-            <li><i class="fas fa-check"></i> Branded experience for your clients</li>
             <li><i class="fas fa-check"></i> Monthly performance summary</li>
             <li><i class="fas fa-check"></i> Referral partner badge</li>
           </ul>
           <a href="#partners" class="btn btn-outline pkg-btn">Learn More</a>
         </div>
-
         <div class="pkg-card pkg-card-dark">
           <div class="pkg-badge pkg-badge-gold">Corporate Elite</div>
           <div class="pkg-price"><span class="pkg-price-val">Custom</span></div>
-          <div class="pkg-sub">Enterprise-level notary support tailored to high-volume businesses, law firms, and corporate clients.</div>
-          <ul class="pkg-features pkg-features-light">
+          <div class="pkg-sub">Enterprise-level notary support for high-volume businesses and law firms.</div>
+          <ul class="pkg-features">
             <li><i class="fas fa-check"></i> Volume-based pricing</li>
             <li><i class="fas fa-check"></i> Dedicated account manager</li>
-            <li><i class="fas fa-check"></i> On-site visits at your office</li>
+            <li><i class="fas fa-check"></i> On-site office visits</li>
             <li><i class="fas fa-check"></i> Invoiced monthly billing</li>
-            <li><i class="fas fa-check"></i> SLA response guarantee</li>
             <li><i class="fas fa-check"></i> Custom service agreement</li>
           </ul>
-          <a href="#contact-form" class="btn btn-primary pkg-btn">Request a Quote</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── HOW IT WORKS ─── -->
-  <section class="section section-alt" id="how-it-works">
-    <div class="container">
-      <div class="section-label">The Process</div>
-      <h2 class="section-title">How It Works</h2>
-      <div class="divider"></div>
-      <p class="section-sub">From request to sealed signature — simple, fast, and premium every step of the way.</p>
-      <div class="steps-grid" style="margin-top: 56px;">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>Calculate &amp; Request</h3>
-          <p>Use our instant calculator to see your exact price, then submit your appointment request in under 60 seconds.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>Get Confirmed</h3>
-          <p>We respond within 30 minutes to confirm your appointment and let you know exactly what to prepare.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>We Come to You</h3>
-          <p>Your notary arrives at your home, office, title company, or wherever you need — on time, every time.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h3>Sign &amp; Seal</h3>
-          <p>Documents notarized on the spot with a certified Georgia commission stamp and seal. Done professionally.</p>
+          <a href="#contact-section" class="btn btn-primary pkg-btn">Request a Quote</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ─── PARTNERSHIPS ─── -->
-  <section class="section section-navy" id="partners">
+  <section class="section section-alt" id="partners">
     <div class="container">
       <div class="section-label">Work With Us</div>
       <h2 class="section-title">Partnership Program</h2>
       <div class="divider"></div>
-      <p class="section-sub">We're building long-term relationships with real estate professionals, title companies, law firms, and businesses across Greater Atlanta. Let's grow together.</p>
-
+      <p class="section-sub">Building long-term relationships with real estate professionals, title companies, and law firms across Greater Atlanta.</p>
       <div class="partner-grid">
-
         <div class="partner-card">
           <div class="partner-icon"><i class="fas fa-home"></i></div>
           <h3>Real Estate Agents &amp; Brokers</h3>
-          <p>Offer your clients a seamless signing experience. As a LUXESeal partner, you get priority scheduling, direct access, and a notary who shows up prepared every time.</p>
+          <p>Offer your clients a seamless signing experience. Priority scheduling, direct access, and a notary who shows up prepared.</p>
           <ul class="partner-perks">
             <li><i class="fas fa-star"></i> Priority booking for your clients</li>
             <li><i class="fas fa-star"></i> Discounted loan signing rates</li>
-            <li><i class="fas fa-star"></i> Co-branded experience available</li>
             <li><i class="fas fa-star"></i> Referral rewards program</li>
           </ul>
         </div>
-
         <div class="partner-card">
           <div class="partner-icon"><i class="fas fa-university"></i></div>
           <h3>Title Companies</h3>
-          <p>Reliable, commission-certified notary services that integrate into your closing workflow. We handle the signing so your team can focus on the deal.</p>
+          <p>Reliable notary services that integrate into your closing workflow. We handle the signing so your team focuses on the deal.</p>
           <ul class="partner-perks">
-            <li><i class="fas fa-star"></i> Same-day availability (when open)</li>
+            <li><i class="fas fa-star"></i> Same-day availability</li>
             <li><i class="fas fa-star"></i> Volume pricing available</li>
-            <li><i class="fas fa-star"></i> Consistent, professional experience</li>
             <li><i class="fas fa-star"></i> Invoice-based billing</li>
           </ul>
         </div>
-
         <div class="partner-card">
           <div class="partner-icon"><i class="fas fa-gavel"></i></div>
           <h3>Law Firms &amp; Legal Professionals</h3>
-          <p>Estate attorneys, contract lawyers, and legal teams trust LUXESeal to handle sensitive document signings with discretion and accuracy.</p>
+          <p>Estate attorneys and legal teams trust LUXESeal to handle sensitive document signings with discretion and accuracy.</p>
           <ul class="partner-perks">
             <li><i class="fas fa-star"></i> Wills, trusts, POA specialist</li>
-            <li><i class="fas fa-star"></i> Confidentiality guaranteed</li>
             <li><i class="fas fa-star"></i> Hospital &amp; care facility visits</li>
-            <li><i class="fas fa-star"></i> Flexible scheduling for clients</li>
+            <li><i class="fas fa-star"></i> Confidentiality guaranteed</li>
           </ul>
         </div>
-
       </div>
-
       <div class="partner-cta-box">
         <div>
           <h3>Ready to Partner with LUXESeal?</h3>
-          <p>Send us a message and let's start building a relationship that benefits your clients.</p>
+          <p>Reach out and let's build a relationship that benefits your clients.</p>
         </div>
-        <a href="#contact-form" class="btn btn-primary">
-          <i class="fas fa-handshake"></i> Reach Out to Partner
-        </a>
+        <a href="#contact-section" class="btn btn-primary"><i class="fas fa-handshake"></i> Get in Touch</a>
       </div>
     </div>
   </section>
 
-  <!-- ─── TESTIMONIALS ─── -->
-  <section class="section" id="testimonials">
+  <!-- ─── TESTIMONIALS + FAQ ─── -->
+  <section class="section" id="social-proof">
     <div class="container">
-      <div class="section-label">Client Experiences</div>
-      <h2 class="section-title">What Clients Are Saying</h2>
-      <div class="divider"></div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="testimonial-text">"Absolutely seamless experience. She arrived on time, had everything ready, and my documents were notarized in minutes. This is exactly what the Atlanta area needed."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">M</div>
-            <div>
-              <strong>Marcus T.</strong>
-              <span>Atlanta, GA</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="testimonial-text">"As a real estate agent I've worked with many notaries. LUXESeal is on another level — professional, responsive, and my clients love the experience."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">D</div>
-            <div>
-              <strong>Danielle W.</strong>
-              <span>Real Estate Agent, Decatur</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="testimonial-text">"I needed a notary for my mother's power of attorney at the hospital. LUXESeal came same day, handled everything with care. I'm truly grateful."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">J</div>
-            <div>
-              <strong>Jerome A.</strong>
-              <span>Stone Mountain, GA</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── FAQ ─── -->
-  <section class="section section-alt" id="faq">
-    <div class="container">
-      <div class="section-label">Got Questions?</div>
-      <h2 class="section-title">Frequently Asked</h2>
-      <div class="divider"></div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q">How quickly can you come to me? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-a">We typically respond within 30 minutes and can often schedule appointments same-day or next-day depending on availability. Urgent requests are accommodated when possible.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">What documents do I need to bring? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-a">You'll need a valid government-issued photo ID (driver's license, passport, or state ID), all documents that need to be notarized, and any signers who need to be present must also have valid ID.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Do I need to have my documents signed before you arrive? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-a">No — do NOT sign your documents before the notary arrives. You must sign in the presence of the notary for the notarization to be valid.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">What areas do you service? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-a">We serve DeKalb County and the Greater Atlanta Metro area, including Atlanta, Decatur, Stone Mountain, Tucker, Lithonia, Conyers, Stonecrest, Gwinnett, Clayton, and Rockdale counties. Travel within 15 miles is always included in your service price.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Is a deposit required to book? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-a">No deposit is required. Simply submit your appointment request, we'll confirm within 30 minutes, and payment is collected at the time of your appointment.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">What payment methods do you accept? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-a">We accept cash, Zelle, Cash App, and Venmo. Credit and debit card processing is coming soon. Payment is due at the time of your appointment.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Can you come to a hospital or care facility? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-a">Absolutely. We regularly visit hospitals, nursing homes, and assisted living facilities for time-sensitive documents like power of attorney and healthcare directives. Please mention this when booking.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Do you offer business subscription plans? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-a">Yes! We offer monthly plans for businesses starting at $200/month. See our Packages section above or reach out directly to discuss a custom plan for your organization.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── SERVICE AREA ─── -->
-  <section class="section section-navy" id="service-area">
-    <div class="container">
-      <div class="area-inner">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
         <div>
-          <div class="section-label">Where We Serve</div>
-          <h2 class="section-title">Greater Atlanta Metro</h2>
+          <div class="section-label">Client Experiences</div>
+          <h2 class="section-title">What Clients Say</h2>
           <div class="divider"></div>
-          <p class="section-sub">Based in DeKalb County, LUXESeal serves clients across the Greater Atlanta Metro. Within 30 miles? We've got you covered.</p>
-          <ul class="area-list">
-            <li>DeKalb County</li>
-            <li>Atlanta</li>
-            <li>Decatur</li>
-            <li>Stone Mountain</li>
-            <li>Tucker</li>
-            <li>Lithonia</li>
-            <li>Conyers</li>
-            <li>Stonecrest</li>
-            <li>Gwinnett County</li>
-            <li>Clayton County</li>
-            <li>Rockdale County</li>
-            <li>and surrounding areas</li>
-          </ul>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="testimonial-text">"Absolutely seamless experience. She arrived on time, had everything ready, and my documents were notarized in minutes."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">M</div>
+                <div><strong>Marcus T.</strong><span>Atlanta, GA</span></div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="testimonial-text">"As a real estate agent I've worked with many notaries. LUXESeal is on another level — professional, responsive, and my clients love it."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">D</div>
+                <div><strong>Danielle W.</strong><span>Real Estate Agent, Decatur</span></div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="testimonial-text">"Needed a notary at the hospital same day. LUXESeal came through and handled everything with such care. Truly grateful."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">J</div>
+                <div><strong>Jerome A.</strong><span>Stone Mountain, GA</span></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="area-visual">
-          <div class="area-icon"><i class="fas fa-map-marked-alt"></i></div>
-          <h3>Fully Mobile &amp; On-Site</h3>
-          <p>Home · Office · Hospital · Title Company · Anywhere you need us</p>
-          <a href="#book" class="btn btn-primary" style="margin-top: 24px;">
-            <i class="fas fa-calendar-check"></i> Book Now
-          </a>
+        <div id="faq">
+          <div class="section-label">Got Questions?</div>
+          <h2 class="section-title">FAQ</h2>
+          <div class="divider"></div>
+          <div class="faq-list" style="margin-top:0;">
+            <div class="faq-item">
+              <button class="faq-q">How quickly can you come to me? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-a">We respond within 30 minutes and can often schedule same-day or next-day depending on availability.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">What do I need to bring? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-a">A valid government-issued photo ID and all documents that need to be notarized. Do NOT sign documents before the notary arrives.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">Is a deposit required? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-a">No deposit required. Submit your request, we confirm within 30 minutes, and payment is collected at the appointment.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">What payment methods do you accept? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-a">We accept cash, Zelle, Cash App, and Venmo. Credit/debit card processing coming soon.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">Can you come to a hospital or care facility? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-a">Absolutely. We regularly visit hospitals, nursing homes, and assisted living facilities. Please mention this when booking.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">What areas do you serve? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-a">DeKalb County, Atlanta, Decatur, Stone Mountain, Tucker, Lithonia, Conyers, Stonecrest, and surrounding Gwinnett, Clayton, and Rockdale counties.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ─── CONTACT ─── -->
-  <section class="section" id="contact-form">
+  <section class="section section-alt" id="contact-section">
     <div class="container">
       <div class="section-label">Get In Touch</div>
-      <h2 class="section-title">Have a Question?</h2>
+      <h2 class="section-title">Contact Us</h2>
       <div class="divider"></div>
-      <div class="contact-inner">
-        <div class="contact-info">
-          <p class="section-sub" style="margin-bottom: 40px;">
-            For general questions, partnership inquiries, or if you'd prefer to reach us directly — we're here.
-          </p>
-          <div class="contact-block">
-            <div class="contact-block-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="contact-block-text">
-              <strong>Service Area</strong>
-              <span>DeKalb County &amp; Greater Atlanta Metro, GA</span>
-            </div>
-          </div>
-          <div class="contact-block">
-            <div class="contact-block-icon"><i class="fas fa-clock"></i></div>
-            <div class="contact-block-text">
-              <strong>Availability</strong>
-              <span>Monday – Saturday · By Appointment</span>
-            </div>
-          </div>
-          <div class="contact-block">
-            <div class="contact-block-icon"><i class="fas fa-bolt"></i></div>
-            <div class="contact-block-text">
-              <strong>Response Time</strong>
-              <span>Under 30 minutes during business hours</span>
-            </div>
-          </div>
-          <div class="contact-block">
-            <div class="contact-block-icon"><i class="fas fa-envelope"></i></div>
-            <div class="contact-block-text">
-              <strong>Email</strong>
-              <span>hello@luxesealnotaryco.com</span>
-            </div>
-          </div>
-          <a href="#book" class="btn btn-primary" style="margin-top: 8px;">
-            <i class="fas fa-bolt"></i> Skip to Booking
-          </a>
+      <div class="contact-strip">
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <strong>Service Area</strong>
+          <span>DeKalb County &amp; Greater Atlanta, GA</span>
         </div>
-        <div class="contact-form">
-          <h3>Send a Message</h3>
-          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <div class="form-row">
-              <div class="form-group">
-                <label>First Name</label>
-                <input type="text" name="first_name" placeholder="Jane" required>
-              </div>
-              <div class="form-group">
-                <label>Last Name</label>
-                <input type="text" name="last_name" placeholder="Smith" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Email Address</label>
-              <input type="email" name="email" placeholder="jane@example.com" required>
-            </div>
-            <div class="form-group">
-              <label>Message</label>
-              <textarea name="message" placeholder="Your question or inquiry..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary form-submit">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-          </form>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
+          <strong>Availability</strong>
+          <span>Mon–Sat · By Appointment</span>
         </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-bolt"></i></div>
+          <strong>Response Time</strong>
+          <span>Under 30 minutes</span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+          <strong>Phone</strong>
+          <span><a href="tel:+14703449111" style="color:var(--cream-dim);text-decoration:none;">(470) 344-9111</a></span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+          <strong>Email</strong>
+          <span><a href="mailto:hello@luxesealnotaryco.com" style="color:var(--cream-dim);text-decoration:none;">hello@luxesealnotaryco.com</a></span>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="#book" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book an Appointment</a>
       </div>
     </div>
   </section>
@@ -797,10 +678,8 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <img src="/images/logo.png" alt="LUXESeal Notary Co." class="footer-logo">
-          <p>Premium mobile notary services for DeKalb County and the Greater Atlanta Metro area. Elevated Service. Trusted Results.</p>
-          <a href="#book" class="btn btn-primary" style="margin-top: 20px; font-size: 13px;">
-            Book an Appointment
-          </a>
+          <p>Premium mobile notary services for DeKalb County and Greater Atlanta. Elevated Service. Trusted Results.</p>
+          <p style="margin-top:8px;font-size:11px;color:rgba(249,245,239,0.3);">Serving: DeKalb · Atlanta · Decatur · Stone Mountain · Tucker · Lithonia · Conyers · Gwinnett · Clayton · Rockdale</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
@@ -817,9 +696,9 @@
           <ul>
             <li><a href="#packages">Packages &amp; Plans</a></li>
             <li><a href="#partners">Partnership Program</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#service-area">Service Area</a></li>
+            <li><a href="#book">Book Appointment</a></li>
+            <li><a href="#contact-section">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -830,7 +709,7 @@
     </div>
   </footer>
 
-  <!-- ─── LUXE CHAT ASSISTANT ─── -->
+  <!-- ─── LUXE AI ASSISTANT ─── -->
   <div class="chat-widget" id="chatWidget">
     <div class="chat-window" id="chatWindow">
       <div class="chat-header">
@@ -844,12 +723,15 @@
         <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
       </div>
       <div class="chat-messages" id="chatMessages"></div>
-      <div class="chat-options" id="chatOptions"></div>
+      <div class="chat-input-row">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Ask me anything..." maxlength="300">
+        <button class="chat-send" id="chatSend"><i class="fas fa-paper-plane"></i></button>
+      </div>
     </div>
-    <button class="chat-bubble" id="chatBubble" aria-label="Open Chat Assistant">
+    <button class="chat-bubble" id="chatBubble" aria-label="Chat with LUXE Assistant">
       <i class="fas fa-comment-dots" id="chatIcon"></i>
       <span class="chat-pulse"></span>
-      <div class="chat-preview" id="chatPreview">👋 Need help booking?</div>
+      <div class="chat-preview" id="chatPreview">Hi! How can I help?</div>
     </button>
   </div>
 
