@@ -365,8 +365,14 @@
           <div class="success-wrap">
             <div class="success-icon"><i class="fas fa-check-circle"></i></div>
             <h3>Request Submitted!</h3>
-            <p>We've received your appointment request and will reach out within <strong>30 minutes</strong> to confirm.</p>
-            <a href="#" class="btn btn-outline" style="margin-top: 24px;" onclick="resetFlow(); return false;">Book Another Appointment</a>
+            <p>We've received your appointment request. Now pick a time that works for you — we'll confirm within 30 minutes.</p>
+          </div>
+          <div class="calendly-wrap">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/fvrtgrlllc/30min?hide_gdpr_banner=1&primary_color=c5a86e&background_color=0c1525&text_color=f9f5ef" style="min-width:280px;height:650px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          </div>
+          <div style="text-align:center; margin-top: 20px;">
+            <a href="#" class="btn btn-outline" onclick="resetFlow(); return false;">Book Another Appointment</a>
           </div>
         </div>
       </div>
